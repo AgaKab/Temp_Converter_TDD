@@ -18,10 +18,10 @@ class TestTemperatureConverter(unittest.TestCase):
         self.assertEqual(17, self.converter.kelvin_to_celsius(290.15))
         
     def test_fahrenheit_to_kelvin(self):
-        self.assertEqual(305.37, self.converter.fahrenheit_to_kelvin(90))
+        self.assertAlmostEqual(305.37, self.converter.fahrenheit_to_kelvin(90), places=2)
         
     def test_kelvin_to_fahrenheit(self):
-       self.assertEqual(83.93, self.converter.kelvin_to_fahrenheit(302))
+       self.assertAlmostEqual(83.93, self.converter.kelvin_to_fahrenheit(302), places=2)
 
 if __name__=="__main__":
     unittest.main()
